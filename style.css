@@ -1,0 +1,24 @@
+/* style.css */
+
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    margin: 0;
+}
+
+.image-container img {
+    max-width: 40%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
