@@ -104,6 +104,7 @@
   --body-color: hsl(0, 5%, 10%);
   --body-bg-color: hsl(210, 20%, 98%);
   --link-visited: hsl(0, 100%, 33%);
+  --link-visited: hsl(24, 99%, 32%);
   --link-focus-outline: hsl(220, 90%, 52%);
   --pre-bg-color: hsl(210, 28%, 93%);
   --kbd-bg-color: hsl(210, 5%, 100%);
@@ -202,6 +203,7 @@ body {
 /* Justify and hyphenate all paragraphs */
 p {
   text-align: justify;
+  text-justify: inter-word;
   hyphens: auto;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -497,11 +499,11 @@ dl dd {
   position: relative;
 }
 .proof::before {
-  content: 'Proof. ' attr(title);
+  content: 'Proof.â€ƒ' attr(title);
   font-style: italic;
 }
 .proof:after {
-  content: '◾️';
+  content: 'â—¾ï¸';
   filter: var(--proof-symbol-filter);
   position: absolute;
   right: -12px;
