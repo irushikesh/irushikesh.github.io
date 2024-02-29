@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rushikesh Shinde</title>
-    <link rel="stylesheet" href="latex.css">
+    <title>Latex css</title>
+    <link rel="stylesheet" href="css/latex.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,6 +12,8 @@
     <header>
         <h1> Rushikesh Shinde </h1> 
     </header>
+
+    <button id="dark-mode-toggle">Toggle dark mode</button>
    
     <main>
         
@@ -21,8 +23,8 @@
         
 
         <article class="abstract">
-            <p align="justify">   <font size="+0">I am PhD student at <a href="https://sites.google.com/view/theory-of-complex-systems/welcome"> Theory of Complex system lab</a>, under the supervision of  <a href="https://scholar.google.ca/citations?user=QIEqvX8AAAAJ&hl=en">Dr. Andrew Callan-Jones</a>. <a href="https://scholar.google.ca/citations?user=RlshMHMAAAAJ&hl=en">Dr. Raphaël Voituriez</a> is my co-supervisor.
-                I am currently investigating the behaviour of Active fluids on curved surfaces, using a combination of both analytical approaches and numerical techniques. Prior to this, I did my masters at TU Dresden in Computational Modelling and Simulation, where I had worked with Dr. Steffen Rulands and Dr. Abhinav Sharma. Here is a short  <a href= "https://drive.google.com/file/d/17Lf7bWTI_dfC9_W8dcmRCHaJmdWfdeEz/view?usp=sharing" > CV</a>.
+            <p text-align="justify">   <font size="+0">I am PhD student at <a href="https://sites.google.com/view/theory-of-complex-systems/welcome"> Theory of Complex system lab</a>, under the supervision of  <a href="https://scholar.google.ca/citations?user=QIEqvX8AAAAJ&hl=en">Dr. Andrew Callan-Jones</a>. <a href="https://scholar.google.ca/citations?user=RlshMHMAAAAJ&hl=en">Dr. Raphaël Voituriez</a> is my co-supervisor.
+                I am currently investigating the behaviour of Active fluids on curved surfaces, using a combination of both analytical approaches and numerical techniques. Prior to this, I did my masters at TU Dresden in Computational Modelling and Simulation, where I had worked with  <a href="https://scholar.google.co.uk/citations?hl=en&user=DA2T0EYAAAAJ"> Dr. Steffen Rulands</a> and <a href="https://scholar.google.co.uk/citations?user=qmmD61AAAAAJ"> Dr. Abhinav Sharma.</a> Here is a short  <a href= "https://drive.google.com/file/d/1VbtFVtp5xyM1B5vKoGu2zdyXr6e4VXBU/view?usp=share_link" > CV</a>.
             </p>  </font>
         </article>
 
@@ -51,5 +53,15 @@
         </section>
         
     </main>
+    
+    <script>
+        document
+    .querySelector("#dark-mode-toggle")
+    .addEventListener('click', () => {
+     document.body.classList.toggle("latex-dark");
+    });
+        </script>
+
 </body>
+
 </html>
