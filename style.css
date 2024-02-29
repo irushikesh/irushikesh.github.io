@@ -28,10 +28,3 @@ div {
   text-justify: inter-word;
 }
 
-a {text-decoration:none;}
-
-#dark-mode-toggle {
-  position: fixed;
-  top: 10px; /* Adjust the top position as needed */
-  right: 10px; /* Adjust the right position as needed */
-}
