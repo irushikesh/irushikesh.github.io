@@ -75,22 +75,4 @@ main {
     margin-bottom: 1.4rem;             /* space between paragraphs */
 }
 
-/* -------------------------------------------------
-   7️⃣  Links – subtle, academic style
-   ------------------------------------------------- */
-a {
-    color: #0066cc;            /* classic “blue link” */
-    text-decoration: none;
-}
-a:hover,
-a:focus {
-    text-decoration: underline;
-}
 
-/* -------------------------------------------------
-   8️⃣  Responsive tweaks (optional)
-   ------------------------------------------------- */
-@media (max-width: 500px) {
-    header h1 { font-size: 1.8rem; }
-    .abstract p { text-align: left; }   /* left‑align on very small screens for readability */
-}
