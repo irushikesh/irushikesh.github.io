@@ -1,8 +1,7 @@
 /* -------------------------------------------------
-   1️⃣  Global page layout
+   1️⃣  Global page layout (your original reset)
    ------------------------------------------------- */
 html {
-    /* Prevent the page from becoming too wide on large screens */
     box-sizing: border-box;
 }
 *, *::before, *::after {
@@ -10,31 +9,63 @@ html {
 }
 
 /* -------------------------------------------------
-   2️⃣  Font – LaTeX‑style serif
+   2️⃣  Centered image helpers (unchanged)
    ------------------------------------------------- */
-body {
-    /* If the Google‑font loads we get a true LaTeX look,
-       otherwise fall back to common serif fonts. */
-    font-family: "Latin Modern Roman", "Times New Roman", Georgia, serif;
-    font-size: 1.05rem;          /* ~16‑17 px – comfortable reading */
-    line-height: 1.7;            /* generous line spacing */
-    color: #222;                 /* dark‑gray is easier on the eyes than pure black */
-    background: #fafafa;         /* very light gray background */
-    margin: 0;
-    padding: 0;
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;               /* keep the image responsive inside its container */
 }
 
 /* -------------------------------------------------
-   6️⃣  Abstract / text block
+   3️⃣  Image container – keep it centered and give it a
+       fixed‑height “viewport” so the layout doesn’t jump
    ------------------------------------------------- */
-.abstract {
-    /* nothing needed here – we style the <p> inside */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 38vh;              /* 38 % of the viewport height – you can tweak */
+    margin: 0;
 }
+
+/* -------------------------------------------------
+   4️⃣  Image size – **stable** across browsers
+   ------------------------------------------------- */
+.image-container img {
+    max-width: 250px;          /* maximum width the picture may take */
+    width: 100%;               /* shrink if the viewport is narrower */
+    height: auto;              /* keep the aspect ratio */
+    display: block;
+    margin: 0 auto;
+}
+
+/* -------------------------------------------------
+   5️⃣  Paragraphs – tighter justification for the abstract
+   ------------------------------------------------- */
 .abstract p {
     text-align: justify;               /* full justification */
     text-justify: inter-word;          /* better word‑spacing */
-    hyphens: auto;                     /* automatic hyphenation on supported browsers */
-    margin-bottom: 1.4rem;             /* space between paragraphs */
+    hyphens: auto;                     /* automatic hyphenation where supported */
+    line-height: 1.6;                  /* comfortable line spacing */
+    margin-bottom: 1.2rem;             /* space between paragraphs */
 }
 
+/* -------------------------------------------------
+   6️⃣  Generic divs – keep your original rule
+   ------------------------------------------------- */
+div {
+    text-align: justify;
+    text-justify: inter-word;
+}
 
+/* -------------------------------------------------
+   8️⃣  Optional: limit the whole page width (makes the
+       abstract look more “paper‑like”)
+   ------------------------------------------------- */
+main {
+    max-width: 800px;          /* width of a typical journal column */
+    margin: 2rem auto;         /* centre the content */
+    padding: 0 1rem;           /* small side padding on tiny screens */
+}
